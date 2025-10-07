@@ -1,56 +1,43 @@
-<link rel="stylesheet" href="index.css">
-
+/* --- Global Styles --- */
 body {
   font-family: 'Inter', sans-serif;
 }
 
-/* Buttons */
+/* --- Buttons --- */
 .btn-primary {
-  background-color: #3b82f6; /* Tailwind blue-500 */
+  background-color: #3b82f6;
   color: white;
   padding: 0.75rem 1.5rem;
   border-radius: 0.75rem;
   font-size: 1.125rem;
   font-weight: 600;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   transition: background-color 0.2s ease, transform 0.2s ease;
 }
 
 .btn-primary:hover {
-  background-color: #2563eb; /* Tailwind blue-600 */
+  background-color: #2563eb;
   transform: translateY(-2px);
 }
 
-/* Cards */
+/* --- Cards --- */
 .card {
   background: white;
   padding: 2rem;
   border-radius: 1rem;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   transition: box-shadow 0.2s ease, transform 0.2s ease;
 }
 
 .card:hover {
-  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
-/* Subtle slow bounce animation */
-@keyframes bounceSlow {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-4px); }
-}
-.animate-bounce-slow {
-  animation: bounceSlow 3s infinite;
-}
-/* --- Hero background smoothing --- */
+/* --- Hero Container --- */
 .hero-container {
-  border-radius: 2rem; /* smooth corners */
-  background: linear-gradient(
-    135deg,
-    rgba(59, 130, 246, 0.2),
-    rgba(30, 58, 138, 0.6)
-  );
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  border-radius: 2rem;
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.25), rgba(30, 58, 138, 0.7));
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.25);
   backdrop-filter: blur(10px);
   padding: 4rem;
   transition: all 0.4s ease;
@@ -61,7 +48,7 @@ body {
   transform: scale(1.01);
 }
 
-/* --- Glowing halo around bulb --- */
+/* --- Glowing Halo --- */
 .glow-effect {
   position: absolute;
   top: 50%;
@@ -71,11 +58,12 @@ body {
   transform: translate(-50%, -50%);
   background: radial-gradient(
     circle,
-    rgba(59, 130, 246, 0.4),
-    rgba(30, 58, 138, 0.6)
+    rgba(255, 223, 150, 0.4) 0%,
+    rgba(255, 223, 150, 0.1) 40%,
     transparent 70%
   );
   border-radius: 50%;
+  filter: blur(60px);
   pointer-events: none;
   animation: glowPulse 6s ease-in-out infinite;
 }
@@ -83,4 +71,26 @@ body {
 @keyframes glowPulse {
   0%, 100% { opacity: 0.6; }
   50% { opacity: 1; }
+}
+
+/* --- About Section Enhancements --- */
+#about {
+  position: relative;
+}
+
+#about::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at center,
+    rgba(255, 223, 150, 0.25),
+    rgba(255, 255, 255, 0) 70%
+  );
+  z-index: 0;
+}
+
+#about > div {
+  z-index: 1;
+  position: relative;
 }
