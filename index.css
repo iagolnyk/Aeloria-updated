@@ -66,17 +66,16 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 500px;
-  height: 500px;
+  width: min(60vw, 500px);
+  height: min(60vw, 500px);
   transform: translate(-50%, -50%);
   background: radial-gradient(
     circle,
-    rgba(255, 223, 150, 0.4) 0%,
-    rgba(255, 223, 150, 0.1) 40%,
+    rgba(59, 130, 246, 0.4),
+    rgba(30, 58, 138, 0.6)
     transparent 70%
   );
   border-radius: 50%;
-  filter: blur(50px);
   pointer-events: none;
   animation: glowPulse 6s ease-in-out infinite;
 }
