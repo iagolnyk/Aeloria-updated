@@ -73,6 +73,36 @@ body {
   50% { opacity: 1; }
 }
 
+/* --- Gentle Sunlight Shimmer --- */
+.sunlight-shimmer {
+  position: absolute;
+  top: -30%;
+  left: -30%;
+  width: 160%;
+  height: 160%;
+  background: radial-gradient(
+    circle at 30% 40%,
+    rgba(255, 255, 200, 0.08),
+    rgba(255, 255, 150, 0.05),
+    transparent 70%
+  );
+  animation: sunlightDrift 20s linear infinite alternate;
+  filter: blur(80px);
+  z-index: 0;
+}
+
+@keyframes sunlightDrift {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(10%, 5%) scale(1.05);
+  }
+  100% {
+    transform: translate(-5%, -5%) scale(1);
+  }
+}
+
 /* --- About Section Enhancements --- */
 #about {
   position: relative;
