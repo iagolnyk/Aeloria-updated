@@ -67,6 +67,18 @@ body {
   pointer-events: none;
   animation: glowPulse 6s ease-in-out infinite;
 }
+.glow-lens {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: min(50vw, 400px);
+  height: min(50vw, 400px);
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,255,255,0.15) 0%, transparent 70%);
+  filter: blur(60px);
+  animation: glowPulse 10s ease-in-out infinite alternate;
+}
 
 @keyframes glowPulse {
   0%, 100% { opacity: 0.6; }
