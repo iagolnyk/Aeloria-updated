@@ -4,22 +4,24 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Aeloria Ltd.</title>
+
   <!-- Tailwind via CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
+
   <!-- Custom Styles -->
   <link rel="stylesheet" href="index.css" />
+
   <!-- Favicon -->
-<link rel="icon" href="favicon.ico" type="image/x-icon">
-<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
 </head>
+
 <body class="bg-gradient-to-b from-gray-900 via-blue-900 to-gray-800 text-white min-h-screen">
 
   <!-- Navbar -->
   <nav class="flex justify-between items-center px-8 py-4 bg-gray-800/90 shadow-lg backdrop-blur-sm sticky top-0 z-50">
     <div class="flex items-center space-x-3">
-  <!-- <img src="logo.png" alt="Aeloria Logo" class="h-10 w-10 rounded-full" /> -->
-  <h1 class="text-2xl font-bold tracking-wide">Aeloria Ltd.</h1>
-</div>
+      <h1 class="text-2xl font-bold tracking-wide">Aeloria Ltd.</h1>
     </div>
     <ul class="flex space-x-6 text-lg">
       <li><a href="#services" class="hover:text-blue-300 transition">Services</a></li>
@@ -28,21 +30,24 @@
       <li><a href="#contact" class="hover:text-blue-300 transition">Contact</a></li>
     </ul>
   </nav>
+
   <!-- Hero Section -->
-<section class="hero-container relative flex flex-col items-center justify-center text-center overflow-hidden rounded-3xl shadow-lg">
-  <div class="glow-effect"></div>
-  <img src="aeloria_glow.svg" alt="Aeloria glowing light bulb"
-    class="relative w-[40vw] max-w-[500px] opacity-60" />
-  <div class="relative z-10">
-    <h2 class="text-5xl font-extrabold mb-6 text-blue-200 drop-shadow-lg">
-      Transforming Businesses for the Digital Future
-    </h2>
-    <p class="text-lg max-w-2xl text-gray-300 mb-8">
-      We specialize in consultancy, digital transformation, process streamlining, optimization, and automation solutions.
-    </p>
-    <a href="#contact" class="btn-primary animate-bounce-slow">Get Started</a>
-  </div>
-</section>
+  <section class="hero-container relative flex flex-col items-center justify-center text-center overflow-hidden rounded-3xl shadow-lg mt-8 mb-16 mx-4">
+    <div class="glow-effect"></div>
+    <img src="aeloria_glow.svg" alt="Aeloria glowing light bulb"
+      class="relative w-[40vw] max-w-[500px] opacity-50 animate-pulse-slow" />
+    <div class="relative z-10">
+      <h2 class="text-5xl font-extrabold mb-6 text-blue-200 drop-shadow-lg">
+        Transforming Businesses for the Digital Future
+      </h2>
+      <p class="text-lg max-w-2xl text-gray-300 mb-8 mx-auto">
+        We specialize in consultancy, digital transformation, process streamlining, optimization, and automation solutions.
+      </p>
+      <a href="#contact" class="btn-primary animate-bounce-slow">Get Started</a>
+    </div>
+  </section>
+
+  <!-- Services -->
   <section id="services" class="py-24 px-8 bg-gray-100 text-gray-900">
     <h3 class="text-4xl font-bold text-center mb-12">Our Services</h3>
     <div class="grid md:grid-cols-3 gap-10 max-w-6xl mx-auto">
@@ -67,25 +72,26 @@
     <div class="max-w-5xl mx-auto space-y-12">
       <div class="card hover:shadow-xl transition">
         <h4 class="card-title">Award-Winning Automation Product</h4>
-        <p>
-          From <strong>project initiation to delivery and support</strong>, our automation product has been recognized for its impact on efficiency and scalability.
-        </p>
+        <p>From <strong>project initiation to delivery and support</strong>, our automation product has been recognized for its impact on efficiency and scalability.</p>
       </div>
       <div class="card hover:shadow-xl transition">
         <h4 class="card-title">Digital Transformation: Paper to Digital</h4>
-        <p>
-          Transform traditional paper files into a fully <strong>digital ecosystem</strong>. Save time, reduce costs, and promote <strong>sustainability</strong> while protecting the environment.
-        </p>
+        <p>Transform traditional paper files into a fully <strong>digital ecosystem</strong>. Save time, reduce costs, and promote <strong>sustainability</strong> while protecting the environment.</p>
       </div>
     </div>
   </section>
 
   <!-- About -->
-  <section id="about" class="py-24 px-8 bg-gradient-to-r from-gray-200 to-gray-100 text-gray-900 rounded-3xl shadow-inner">
-    <h3 class="text-4xl font-bold text-center mb-12">About Us</h3>
-    <p class="max-w-4xl mx-auto text-center text-lg leading-relaxed">
-      Aeloria Ltd. is a forward-thinking consultancy firm dedicated to driving digital innovation. With a team of experts across multiple industries, we deliver solutions that empower businesses to thrive in the digital age.
-    </p>
+  <section id="about" class="py-24 px-8 text-gray-900 relative overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-br from-yellow-100/30 via-white/80 to-blue-100/30 rounded-[3rem] blur-2xl"></div>
+    <div class="relative max-w-5xl mx-auto text-center bg-white/60 backdrop-blur-md rounded-[2.5rem] shadow-lg p-16 border border-white/40">
+      <h3 class="text-4xl font-bold mb-8 text-gray-800">About Us</h3>
+      <p class="text-lg text-gray-700 leading-relaxed">
+        Aeloria Ltd. is a forward-thinking consultancy firm dedicated to driving digital innovation.
+        With a team of experts across multiple industries, we deliver solutions that empower businesses
+        to thrive in the digital age.
+      </p>
+    </div>
   </section>
 
   <!-- Contact -->
@@ -99,10 +105,14 @@
         <input type="text" id="name" name="name" required
           class="w-full px-4 py-3 rounded-lg bg-gray-100 text-gray-900 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500" />
       </div>
+
+      <div>
         <label for="email" class="block mb-2 font-semibold">Email</label>
         <input type="email" id="email" name="_replyto" required
           class="w-full px-4 py-3 rounded-lg bg-gray-100 text-gray-900 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500" />
       </div>
+
+      <div>
         <label for="message" class="block mb-2 font-semibold">Message</label>
         <textarea id="message" name="message" rows="5" required
           class="w-full px-4 py-3 rounded-lg bg-gray-100 text-gray-900 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
