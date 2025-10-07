@@ -1,107 +1,3 @@
-/* --- Global Styles --- */
-body {
-  font-family: 'Inter', sans-serif;
-}
-
-/* --- Buttons --- */
-.btn-primary {
-  background-color: #3b82f6;
-  color: white;
-  padding: 0.75rem 1.5rem;
-  border-radius: 0.75rem;
-  font-size: 1.125rem;
-  font-weight: 600;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  transition: background-color 0.2s ease, transform 0.2s ease;
-}
-
-.btn-primary:hover {
-  background-color: #2563eb;
-  transform: translateY(-2px);
-}
-
-/* --- Cards --- */
-.card {
-  background: white;
-  padding: 2rem;
-  border-radius: 1rem;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  transition: box-shadow 0.2s ease, transform 0.2s ease;
-}
-
-.card:hover {
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-}
-
-/* --- Hero Container --- */
-.hero-container {
-  border-radius: 2rem;
-  background: linear-gradient(135deg, rgba(59, 130, 246, 0.25), rgba(30, 58, 138, 0.7));
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.25);
-  backdrop-filter: blur(10px);
-  padding: 4rem;
-  transition: all 0.4s ease;
-}
-
-.hero-container:hover {
-  box-shadow: 0 15px 50px rgba(255, 255, 255, 0.15);
-  transform: scale(1.01);
-}
-
-/* --- Glowing Halo --- */
-.glow-effect {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: min(60vw, 500px);
-  height: min(60vw, 500px);
-  transform: translate(-50%, -50%);
-  background: radial-gradient(
-    circle,
-    rgba(255, 223, 150, 0.4) 0%,
-    rgba(255, 223, 150, 0.1) 40%,
-    transparent 70%
-  );
-  border-radius: 50%;
-  filter: blur(60px);
-  pointer-events: none;
-  animation: glowPulse 6s ease-in-out infinite;
-}
-.glow-lens {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: min(50vw, 400px);
-  height: min(50vw, 400px);
-  transform: translate(-50%, -50%);
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(255,255,255,0.15) 0%, transparent 70%);
-  filter: blur(60px);
-  animation: glowPulse 10s ease-in-out infinite alternate;
-}
-
-@keyframes glowPulse {
-  0%, 100% { opacity: 0.6; }
-  50% { opacity: 1; }
-}
-
-/* --- Gentle Sunlight Shimmer --- */
-.sunlight-shimmer {
-  position: absolute;
-  top: -30%;
-  left: -30%;
-  width: 160%;
-  height: 160%;
-  background: radial-gradient(
-    circle at 30% 40%,
-    rgba(255, 255, 200, 0.08),
-    rgba(255, 255, 150, 0.05),
-    transparent 70%
-  );
-  animation: sunlightDrift 20s linear infinite alternate;
-  filter: blur(80px);
-  z-index: 0;
-}
 .logo-container {
   position: relative;
   display: flex;
@@ -113,6 +9,14 @@ body {
   overflow: hidden;
   background: radial-gradient(circle at center, rgba(255,255,255,0.1), rgba(30,58,138,0.2));
   box-shadow: 0 0 40px rgba(255, 223, 150, 0.3);
+}
+
+.logo-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  mix-blend-mode: lighten;
 }
 
 .glow-effect {
@@ -135,49 +39,21 @@ body {
   animation: glowPulse 8s ease-in-out infinite;
   mix-blend-mode: screen;
 }
+
+.glow-lens {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: min(50vw, 400px);
+  height: min(50vw, 400px);
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,255,255,0.15) 0%, transparent 70%);
+  filter: blur(60px);
+  animation: glowPulse 10s ease-in-out infinite alternate;
+}
+
 @keyframes glowPulse {
   0%, 100% { opacity: 0.5; transform: scale(1); }
   50% { opacity: 1; transform: scale(1.1); }
-}
-
-.logo-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 50%;
-  mix-blend-mode: lighten;
-}
-
-@keyframes sunlightDrift {
-  0% {
-    transform: translate(0, 0) scale(1);
-  }
-  50% {
-    transform: translate(10%, 5%) scale(1.05);
-  }
-  100% {
-    transform: translate(-5%, -5%) scale(1);
-  }
-}
-
-/* --- About Section Enhancements --- */
-#about {
-  position: relative;
-}
-
-#about::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(
-    circle at center,
-    rgba(255, 223, 150, 0.25),
-    rgba(255, 255, 255, 0) 70%
-  );
-  z-index: 0;
-}
-
-#about > div {
-  z-index: 1;
-  position: relative;
 }
