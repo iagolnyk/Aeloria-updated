@@ -4,64 +4,91 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Aeloria Ltd.</title>
+  <!-- Tailwind via CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="index.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@1,400;1,500&display=swap" rel="stylesheet">
-  <link rel="icon" href="favicon.png" />
 </head>
-
-<body class="bg-gradient-to-b from-gray-900 via-blue-900 to-gray-800 text-white min-h-screen">
+<body class="bg-gradient-to-b from-gray-900 to-blue-900 text-white min-h-screen">
 
   <!-- Navbar -->
-  <nav class="flex justify-between items-center px-8 py-4 bg-gray-800/90 shadow-lg backdrop-blur-sm sticky top-0 z-50 font-dmsans italic text-lg">
-    <h1 class="text-2xl font-semibold tracking-wide">Aeloria Ltd.</h1>
-    <ul class="flex space-x-6">
-      <li><a href="#services" class="hover:text-blue-300 transition">Services</a></li>
-      <li><a href="#usecases" class="hover:text-blue-300 transition">Use Cases</a></li>
-      <li><a href="#about" class="hover:text-blue-300 transition">About</a></li>
-      <li><a href="#contact" class="hover:text-blue-300 transition">Contact</a></li>
+  <nav class="flex justify-between items-center px-8 py-4 bg-gray-800 shadow-lg">
+    <h1 class="text-2xl font-bold tracking-wide">Aeloria Ltd.</h1>
+    <ul class="flex space-x-6 text-lg">
+      <li><a href="#services" class="hover:text-blue-300">Services</a></li>
+      <li><a href="#usecases" class="hover:text-blue-300">Use Cases</a></li>
+      <li><a href="#about" class="hover:text-blue-300">About</a></li>
+      <li><a href="#contact" class="hover:text-blue-300">Contact</a></li>
     </ul>
   </nav>
 
   <!-- Hero Section -->
-  <section class="hero-container relative flex flex-col items-center justify-center text-center overflow-hidden mt-8 mb-16 mx-4 rounded-3xl border-x-[3px] border-gradient">
-    <div class="glow-effect"></div>
-
-    <img src="aeloria_glow.svg" alt="Aeloria glowing light bulb"
-         class="absolute w-[20vw] max-w-[250px] opacity-20 mix-blend-overlay" />
-
-    <div class="relative z-10 px-4">
-      <h2 class="text-5xl font-extrabold mb-6 text-blue-200 drop-shadow-lg">
-        Transforming Businesses for the Digital Future
-      </h2>
-      <p class="text-lg max-w-2xl text-gray-300 mb-8 mx-auto">
-        We specialize in consultancy, digital transformation, process streamlining, optimization, and automation solutions.
-      </p>
-      <a href="#contact" class="btn-primary animate-bounce-slow">Get Started</a>
-    </div>
+  <section class="flex flex-col items-center justify-center text-center py-32 px-6">
+    <h2 class="text-5xl font-extrabold mb-6 text-blue-200">
+      Transforming Businesses for the Digital Future
+    </h2>
+    <p class="text-lg max-w-2xl text-gray-300 mb-8">
+      We specialize in consultancy, digital transformation, process streamlining, optimization, and automation solutions.
+    </p>
+    <a href="#contact" class="bg-blue-500 hover:bg-blue-600 px-6 py-3 rounded-xl text-lg font-semibold shadow-lg">
+      Get Started
+    </a>
   </section>
 
   <!-- Services -->
   <section id="services" class="py-24 px-8 bg-gray-100 text-gray-900">
     <h3 class="text-4xl font-bold text-center mb-12">Our Services</h3>
     <div class="grid md:grid-cols-3 gap-10 max-w-6xl mx-auto">
-      <div class="service-card">
-        <h4 class="text-2xl font-bold mb-4">Consultancy</h4>
+      <div class="bg-white p-8 rounded-2xl shadow-lg">
+        <h4 class="text-2xl font-semibold mb-4">Consultancy</h4>
         <p>Expert guidance to identify opportunities, reduce costs, and drive efficiency across your organization.</p>
       </div>
-      <div class="service-card">
-        <h4 class="text-2xl font-bold mb-4">Digital Transformation</h4>
+      <div class="bg-white p-8 rounded-2xl shadow-lg">
+        <h4 class="text-2xl font-semibold mb-4">Digital Transformation</h4>
         <p>Modernize your operations, digitize workflows, and empower your teams with the latest technologies.</p>
       </div>
-      <div class="service-card">
-        <h4 class="text-2xl font-bold mb-4">Automation</h4>
+      <div class="bg-white p-8 rounded-2xl shadow-lg">
+        <h4 class="text-2xl font-semibold mb-4">Automation</h4>
         <p>Implement intelligent automation to streamline processes, reduce human error, and boost productivity.</p>
       </div>
     </div>
   </section>
 
+  <!-- Use Cases -->
+  <section id="usecases" class="py-24 px-8 bg-gray-50 text-gray-900">
+    <h3 class="text-4xl font-bold text-center mb-12">Use Cases</h3>
+    <div class="max-w-5xl mx-auto space-y-12">
+      <div class="bg-white p-8 rounded-2xl shadow-lg">
+        <h4 class="text-2xl font-semibold mb-4">Award-Winning Automation Product</h4>
+        <p>
+          From <strong>project initiation to delivery and support</strong>, our automation product has been recognized for its impact on efficiency and scalability.
+        </p>
+      </div>
+      <div class="bg-white p-8 rounded-2xl shadow-lg">
+        <h4 class="text-2xl font-semibold mb-4">Digital Transformation: Paper to Digital</h4>
+        <p>
+          Transform traditional paper files into a fully <strong>digital ecosystem</strong>. Save time, reduce costs, and promote <strong>sustainability</strong> while protecting the environment.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="py-24 px-8 bg-gray-200 text-gray-900">
+    <h3 class="text-4xl font-bold text-center mb-12">About Us</h3>
+    <p class="max-w-4xl mx-auto text-center text-lg">
+      Aeloria Ltd. is a forward-thinking consultancy firm dedicated to driving digital innovation. With a team of experts across multiple industries, we deliver solutions that empower businesses to thrive in the digital age.
+    </p>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-24 px-8 bg-gray-900 text-white text-center">
+    <h3 class="text-4xl font-bold mb-6">Let’s Work Together</h3>
+    <p class="mb-8 text-lg text-gray-300">Contact us to explore how we can transform your business processes and drive growth.</p>
+    <a href="mailto:info@aeloria.com" class="bg-blue-500 hover:bg-blue-600 px-6 py-3 rounded-xl text-lg font-semibold shadow-lg">
+      Email Us
+    </a>
+  </section>
+
+  <!-- Footer -->
   <footer class="bg-gray-800 text-gray-400 text-center py-6">
     © 2025 Aeloria Ltd. All rights reserved.
   </footer>
